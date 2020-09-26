@@ -1,0 +1,49 @@
+.title{
+    height: 150px;
+    border: 10px solid;
+    border-color: rgba(179, 177, 177, 0.897);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.title > table{
+    height: 100%;
+}
+#titlefont{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.upload{
+    height: 50px;
+    width: 100px;
+    border: 5px solid;
+    border-color: #0099ff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    border-radius: 10px;
+}
+.upload:active{
+    background-color: rgb(228, 225, 225);
+}
+
+.btn{
+    margin-top: 30px;
+}
+
+#imshow{
+    margin-top: 30px;
+}
+
+#result{
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

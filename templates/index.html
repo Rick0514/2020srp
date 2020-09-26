@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="./static/css/normal.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+    
+    <div class="title">
+        <table align="center">
+            <tr>
+                <td>
+                    <img src="./static/images/ruler.png" alt="ruler" height="80px" width="80px">
+                </td>
+                <td>
+                    <span id="titlefont">刻度尺识别Web接口</span>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    
+    <div class="btn" align="center">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <table width="300">
+                <tr>
+                    <td>
+                        <label class="upload">上传文件<input type="file" name="image" multiple style="display: none;" onchange="imgPreview(this)" /></label>
+                    </td>
+                    <td>
+                        <label class="upload">提交<input type="submit" multiple style="display: none;" /></label>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    {% if firstTime %}
+        <div align="center">
+            <img id="imshow">
+        </div>
+    {% else %}
+        <div align="center">
+            <img id="imshow" src="{{url_for('static',filename='/images/tmp.png',_t=val1)}}">
+        </div>
+    {% endif %}
+
+    <p id="result">{{number}}</p>
+<!--    <div align="center">-->
+<!--        <img id="imshow">-->
+<!--    </div>-->
+    
+</body>
+</html>
+
+<script type="text/javascript" src="./static/js/index.js"></script>
